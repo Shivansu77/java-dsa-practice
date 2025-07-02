@@ -1,4 +1,4 @@
-import javax.swing.tree.TreeNode;
+// Using the custom TreeNode class defined in TreeNode.java
 
 public class cousinsTree {
     public boolean isCousins(TreeNode root, int x, int y) {

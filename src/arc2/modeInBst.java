@@ -1,19 +1,8 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class modeInBst {
-    /**
-     * Definition for a binary tree node.
-     * public class TreeNode {
-     *     int val;
-     *     TreeNode left;
-     *     TreeNode right;
-     *     TreeNode() {}
-     *     TreeNode(int val) { this.val = val; }
-     *     TreeNode(int val, TreeNode left, TreeNode right) {
-     *         this.val = val;
-     *         this.left = left;
-     *         this.right = right;
-     *     }
-     * }
-     */
+    // Using the custom TreeNode class defined in TreeNode.java
         TreeNode prev=null;
         int count=1;
         int max=0;
@@ -45,5 +34,7 @@ public class modeInBst {
             }else if(count==max){
                 modes.add(root.val);
             }
+            prev = root;
+            helper(root.right,modes);
         }
 }

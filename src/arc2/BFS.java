@@ -1,24 +1,10 @@
 
-import org.w3c.dom.Node;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 //102 Binary Level Order Transversal Question
-/* class TreeNode{
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode(){
-    }
-    TreeNode(int val) {this.val=val;}
-    TreeNode(int val,TreeNode left,TreeNode right){
-        this.val=val;
-        this.left=left;
-        this.right=right;
-    }
-}*/
+// TreeNode class is now defined in TreeNode.java
 
  public class BFS {
     public static void main(String[] args) {

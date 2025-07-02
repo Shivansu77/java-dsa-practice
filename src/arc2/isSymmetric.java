@@ -1,5 +1,11 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class isSymmetric {
     public boolean symmetric(TreeNode root){
+        if (root == null) {
+            return true;
+        }
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root.left);
         queue.add(root.right);

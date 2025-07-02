@@ -1,11 +1,12 @@
+// Using the custom TreeNode class defined in TreeNode.java
 public class findPath {
-    boolean FindPath(Node node,int []arr){
+    boolean FindPath(TreeNode node,int []arr){
         if(node==null){
             return arr.length==0;
         }
         return helper(node,arr,0);
     }
-    boolean helper(Node node,int []arr,int index){
+    boolean helper(TreeNode node,int []arr,int index){
          if(node==null){
              return false;
          }

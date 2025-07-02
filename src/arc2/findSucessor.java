@@ -1,6 +1,4 @@
-import com.sun.source.tree.Tree;
-
-import javax.swing.tree.TreeNode;
+// Using the custom TreeNode class defined in TreeNode.java
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -24,6 +22,6 @@ public class findSucessor {
             }
 
         }
-        return queue.peek();
+        return queue.isEmpty() ? null : queue.peek();
     }
 }

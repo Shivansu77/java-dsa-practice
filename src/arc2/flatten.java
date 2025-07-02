@@ -1,8 +1,8 @@
-import javax.swing.tree.TreeNode;
+// Using the custom TreeNode class defined in TreeNode.java
 
 public class flatten {
     public void flatten(TreeNode root){
-        TreeNode current=node;
+        TreeNode current = root;
         while(current!=null){
             if(current.left!=null){
                 TreeNode temp=current.left;
