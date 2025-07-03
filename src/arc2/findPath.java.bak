@@ -1,4 +1,6 @@
 // Using the custom TreeNode class defined in TreeNode.java
+package arc2;
+
 public class findPath {
     boolean FindPath(TreeNode node,int []arr){
         if(node==null){
@@ -13,7 +15,8 @@ public class findPath {
          if(index>=arr.length || node.val != arr[index]){
             return false;
          }
-         if(node.left==null && node.right!=null && index==arr.length-1){
+         // If we've reached the end of the array, we've found a valid path
+         if(index==arr.length-1){
              return true;
          }
          return helper(node.left,arr,index+1)||helper(node.right,arr,index+1);

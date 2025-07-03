@@ -1,5 +1,3 @@
-package arc2;
-
 public class NKnights {
     public static void main(String[] args) {
         int n=4;

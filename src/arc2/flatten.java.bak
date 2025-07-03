@@ -1,4 +1,5 @@
 // Using the custom TreeNode class defined in TreeNode.java
+package arc2;
 
 public class flatten {
     public void flatten(TreeNode root){

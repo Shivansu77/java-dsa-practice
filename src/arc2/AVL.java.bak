@@ -1,4 +1,6 @@
-class AVL {
+package arc2;
+
+public class AVL {
 
     public class Node {
         private int value;
@@ -169,5 +171,3 @@ class AVL {
     }
 
 }
-
-

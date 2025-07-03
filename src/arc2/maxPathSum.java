@@ -1,3 +1,25 @@
+package arc2;
+
+// Define TreeNode class directly in this file to ensure it's available
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+
+    TreeNode() {
+    }
+
+    TreeNode(int val) {
+        this.val = val;
+    }
+
+    TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+    }
+}
+
 public class maxPathSum {
     int ans=Integer.MIN_VALUE;
     public int maxPath(TreeNode root){

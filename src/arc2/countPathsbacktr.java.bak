@@ -1,0 +1,32 @@
+package arc2;
+
+import java.util.*;
+
+public class countPathsbacktr {
+    List<List<Integer>> countPath(Node node, int sum){
+        List<List<Integer>> paths = new ArrayList<>();
+        List<Integer> path = new ArrayList<>();
+        helper(node, sum, path, paths);
+        return paths;
+    }
+
+    void helper(Node node, int sum, List<Integer> path, List<List<Integer>> paths){
+        if(node == null){
+            return;
+        }
+
+        path.add(node.val);
+
+        if(node.val == sum && node.left == null && node.right == null){
+            paths.add(new ArrayList<>(path));
+        } else {
+            helper(node.left, sum - node.val, path, paths);
+            helper(node.right, sum - node.val, path, paths);
+        }
+
+        // backTrack
+        path.remove(path.size() - 1);
+
+
+    }
+}
