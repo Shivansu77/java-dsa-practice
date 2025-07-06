@@ -5,6 +5,9 @@
       <file url="file://$PROJECT_DIR$/src/arc2/TreeNode.java" />
       <file url="file://$PROJECT_DIR$/src/heaps/MinHeap.java" />
       <file url="file://$PROJECT_DIR$/src/heaps/KthLargestElement.java" />
+      <file url="file://$PROJECT_DIR$/src/GFG/da65y.java" />
+      <file url="file://$PROJECT_DIR$/src/GFG/da66y.java" />
+      <file url="file://$PROJECT_DIR$/src/hashMapsForTrees/twosum.java" />
     </excludeFromCompile>
   </component>
 </project>
