@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <excludeFromCompile>
+      <file url="file://$PROJECT_DIR$/src/hashMapsForTrees/verticalTraversal.java" />
+      <file url="file://$PROJECT_DIR$/src/hashMapsForTrees/mapUsingHash.java" />
+      <file url="file://$PROJECT_DIR$/src/hashMapsForTrees/HashMapFinal.java" />
+      <file url="file://$PROJECT_DIR$/src/hashMapsForTrees/kthsmallest.java" />
+      <file url="file://$PROJECT_DIR$/src/hashMapsForTrees/fst.java" />
+      <file url="file://$PROJECT_DIR$/src/hashMapsForTrees/PreIn.java" />
+      <file url="file://$PROJECT_DIR$/src/hashMapsForTrees/twosum.java" />
+      <file url="file://$PROJECT_DIR$/src/arc2/MAZE.java" />
+      <file url="file://$PROJECT_DIR$/src/arc2/KthBit.java" />
+      <file url="file://$PROJECT_DIR$/src/arc2/TreeNode.java" />
+      <file url="file://$PROJECT_DIR$/src/arc2/arrToBst.java" />
+      <file url="file://$PROJECT_DIR$/src/arc2/minDiffBst.java" />
+      <file url="file://$PROJECT_DIR$/src/arc2/NKnights.java" />
+      <file url="file://$PROJECT_DIR$/src/GFG/da66y.java" />
+      <file url="file://$PROJECT_DIR$/src/GFG/da65y.java" />
+      <file url="file://$PROJECT_DIR$/src/GFG/da69y.java" />
+      <file url="file://$PROJECT_DIR$/src/GFG/da68y.java" />
+      <file url="file://$PROJECT_DIR$/src/graphs/representation.java" />
+      <file url="file://$PROJECT_DIR$/src/heaps/MinHeap.java" />
+      <file url="file://$PROJECT_DIR$/src/heaps/KthLargestElement.java" />
+    </excludeFromCompile>
+  </component>
+</project>

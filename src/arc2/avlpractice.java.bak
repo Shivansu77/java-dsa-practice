@@ -1,0 +1,136 @@
+package arc2;
+
+public class avlpractice {
+    private class Node {
+        private int value;
+        private Node left;
+        private Node right;
+        private int height;
+
+        public Node(int value) {
+            this.value = value;
+            this.height = 1;
+        }
+
+        public int getValue() {
+            return value;
+        }
+    }
+
+    private Node root;
+
+    public avlpractice() {}  // Corrected the constructor to match class name
+
+    public void insert(int value) {
+        root = insert(value, root);
+    }
+
+    private Node insert(int value, Node node) {
+        if (node == null) {
+            return new Node(value);
+        }
+
+        if (value < node.value) {
+            node.left = insert(value, node.left);
+        } else if (value > node.value) {
+            node.right = insert(value, node.right);
+        }
+
+        node.height = Math.max(height(node.left), height(node.right)) + 1;
+
+        return balance(node);
+    }
+
+    private int height(Node node) {
+        return (node == null) ? 0 : node.height;
+    }
+
+    private int getBalanceFactor(Node node) {
+        return (node == null) ? 0 : height(node.left) - height(node.right);
+    }
+
+    private Node balance(Node node) {
+        int balanceFactor = getBalanceFactor(node);
+
+        if (balanceFactor > 1) {
+            if (getBalanceFactor(node.left) < 0) {
+                node.left = rotateLeft(node.left);
+            }
+            return rotateRight(node);
+        }
+
+        if (balanceFactor < -1) {
+            if (getBalanceFactor(node.right) > 0) {
+                node.right = rotateRight(node.right);
+            }
+            return rotateLeft(node);
+        }
+
+        return node;
+    }
+
+    private Node rotateRight(Node y) {
+        Node x = y.left;
+        Node T = x.right;
+
+        x.right = y;
+        y.left = T;
+
+        y.height = Math.max(height(y.left), height(y.right)) + 1;
+        x.height = Math.max(height(x.left), height(x.right)) + 1;
+
+        return x;
+    }
+
+    private Node rotateLeft(Node x) {
+        Node y = x.right;
+        Node T = y.left;
+
+        y.left = x;
+        x.right = T;
+
+        x.height = Math.max(height(x.left), height(x.right)) + 1;
+        y.height = Math.max(height(y.left), height(y.right)) + 1;
+
+        return y;
+    }
+
+    public void populate(int[] nums) {
+        for (int num : nums) {
+            this.insert(num);
+        }
+    }
+
+    public void populateSorted(int[] nums) {
+        populateSorted(nums, 0, nums.length);
+    }
+
+    private void populateSorted(int[] nums, int start, int end) {
+        if (start >= end) {
+            return;
+        }
+        int mid = (start + end) / 2;
+        this.insert(nums[mid]);
+        populateSorted(nums, start, mid);
+        populateSorted(nums, mid + 1, end);
+    }
+
+    public void display() {
+        display(this.root, "", true);
+    }
+
+    private void display(Node node, String indent, boolean isRoot) {
+        if (node != null) {
+            System.out.println(indent + (isRoot ? "Root: " : "|-- ") + node.value);
+            display(node.left, indent + (isRoot ? "    " : "|   "), false);
+            display(node.right, indent + (isRoot ? "    " : "|   "), false);
+        }
+    }
+
+    public static void main(String[] args) {
+        avlpractice tree = new avlpractice();  // Corrected class name usage
+        int[] values = {10, 20, 30, 25, 28, 27, 5};
+        tree.populate(values);
+        tree.display();
+    }
+}

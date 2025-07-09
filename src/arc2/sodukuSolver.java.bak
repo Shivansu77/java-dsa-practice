@@ -1,0 +1,86 @@
+package arc2;
+
+public class sodukuSolver {
+    public static void main(String[] args) {
+        int[][] board = {
+                {5, 3, 0, 0, 7, 0, 0, 0, 0},
+                {6, 0, 0, 1, 9, 5, 0, 0, 0},
+                {0, 9, 8, 0, 0, 0, 0, 6, 0},
+                {8, 0, 0, 0, 6, 0, 0, 0, 3},
+                {4, 0, 0, 8, 0, 3, 0, 0, 1},
+                {7, 0, 0, 0, 2, 0, 0, 0, 6},
+                {0, 6, 0, 0, 0, 0, 2, 8, 0},
+                {0, 0, 0, 4, 1, 9, 0, 0, 5},
+                {0, 0, 0, 0, 8, 0, 0, 7, 9}
+        };
+
+        if (solve(board)) {
+            System.out.println("Solved Sudoku :)");
+            printBoard(board);
+        } else {
+            System.out.println("No solution exists.");
+        }
+    }
+
+    static boolean solve(int[][] board) {
+        int n = board.length;
+        int row = -1, col = -1;
+        boolean emptyLeft = false;
+
+        // Find an empty cell
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (board[i][j] == 0) {
+                    row = i;
+                    col = j;
+                    emptyLeft = true;
+                    break;
+                }
+            }
+            if (emptyLeft) break;
+        }
+
+        // If no empty cell left, puzzle is solved
+        if (!emptyLeft) return true;
+
+        // Try filling with numbers 1-9
+        for (int num = 1; num <= 9; num++) {
+            if (isSafe(board, row, col, num)) {
+                board[row][col] = num;
+                if (solve(board)) return true;
+                board[row][col] = 0; // Undo choice if solution not found
+            }
+        }
+        return false;
+    }
+
+    static boolean isSafe(int[][] board, int row, int col, int num) {
+        int n = board.length;
+
+        // Check row & column
+        for (int i = 0; i < n; i++) {
+            if (board[row][i] == num || board[i][col] == num) return false;
+        }
+
+        // Check 3x3 sub-grid
+        int sqrt = (int) Math.sqrt(n);
+        int rowStart = row - row % sqrt;
+        int colStart = col - col % sqrt;
+
+        for (int r = rowStart; r < rowStart + sqrt; r++) {
+            for (int c = colStart; c < colStart + sqrt; c++) {
+                if (board[r][c] == num) return false;
+            }
+        }
+        return true;
+    }
+
+    static void printBoard(int[][] board) {
+        for (int[] row : board) {
+            for (int num : row) {
+                System.out.print(num + " ");
+            }
+            System.out.println();
+        }
+    }
+}
