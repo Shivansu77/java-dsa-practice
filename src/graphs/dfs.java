@@ -2,7 +2,7 @@ package graphs;
 
 public class dfs {
 
-        public ArrayList<Integer> dfs(ArrayList<ArrayList<Integer>> adj) {
+        public ArrayList<Integer> dfs1(ArrayList<ArrayList<Integer>> adj) {
             int n=adj.size();
             ArrayList<Integer>result=new ArrayList<>();
             boolean []vis=new boolean[n];
