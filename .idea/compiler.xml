@@ -9,6 +9,12 @@
       <file url="file://$PROJECT_DIR$/src/GFG/da66y.java" />
       <file url="file://$PROJECT_DIR$/src/hashMapsForTrees/twosum.java" />
       <file url="file://$PROJECT_DIR$/src/hashMapsForTrees/kthsmallest.java" />
+      <file url="file://$PROJECT_DIR$/src/arc2/lengthOfCycle.java" />
+      <file url="file://$PROJECT_DIR$/src/graphs/numIslands.java" />
+      <file url="file://$PROJECT_DIR$/src/graphs/rottenApples.java" />
+      <file url="file://$PROJECT_DIR$/src/GFG/da70y.java" />
+      <file url="file://$PROJECT_DIR$/src/graphs/dfs.java" />
+      <file url="file://$PROJECT_DIR$/src/graphs/Hamilton.java" />
     </excludeFromCompile>
   </component>
 </project>
