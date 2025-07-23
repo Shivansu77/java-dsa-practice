@@ -15,6 +15,12 @@
       <file url="file://$PROJECT_DIR$/src/GFG/da70y.java" />
       <file url="file://$PROJECT_DIR$/src/graphs/dfs.java" />
       <file url="file://$PROJECT_DIR$/src/graphs/Hamilton.java" />
+      <file url="file://$PROJECT_DIR$/src/graphs/courseSchedule2.java" />
+      <file url="file://$PROJECT_DIR$/src/graphs/EventualSafeNodes.java" />
+      <file url="file://$PROJECT_DIR$/src/graphs/courseSchedule.java" />
+      <file url="file://$PROJECT_DIR$/src/graphs/LongestCycleInaGraph.java" />
+      <file url="file://$PROJECT_DIR$/src/graphs/directedGraph.java" />
+      <file url="file://$PROJECT_DIR$/src/graphs/LargestColorDirected.java" />
     </excludeFromCompile>
   </component>
 </project>
