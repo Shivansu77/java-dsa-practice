@@ -21,6 +21,16 @@
       <file url="file://$PROJECT_DIR$/src/graphs/LongestCycleInaGraph.java" />
       <file url="file://$PROJECT_DIR$/src/graphs/directedGraph.java" />
       <file url="file://$PROJECT_DIR$/src/graphs/LargestColorDirected.java" />
+      <file url="file://$PROJECT_DIR$/src/GFG/da80y.java" />
+      <file url="file://$PROJECT_DIR$/src/graphs/allpaths.java" />
+      <file url="file://$PROJECT_DIR$/src/graphs/makeConnected.java" />
+      <file url="file://$PROJECT_DIR$/src/graphs/GeekVillage.java" />
+      <file url="file://$PROJECT_DIR$/src/GFG/da84y.java" />
+      <file url="file://$PROJECT_DIR$/src/GFG/da83y.java" />
+      <file url="file://$PROJECT_DIR$/src/GFG/da81y.java" />
+      <file url="file://$PROJECT_DIR$/src/GFG/da82y.java" />
+      <file url="file://$PROJECT_DIR$/src/graphs/snakesAndLadder.java" />
+      <file url="file://$PROJECT_DIR$/src/graphs/rottenOranges.java" />
     </excludeFromCompile>
   </component>
 </project>
