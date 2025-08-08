@@ -1,6 +1,6 @@
 package graphs;
 
-public class sdu {
+public class dsu {
     private int[] parent;
     private int[] rank;
     private int n;

@@ -36,7 +36,7 @@ public class HashMapFinal<K, V> {
     }
 
     private void reHash() {
-        System.out.println("🔄 Rehashing!");
+        System.out.println(" Rehashing!");
         ArrayList<LinkedList<Entity>> old = list;
         list = new ArrayList<>();
         size = 0;
