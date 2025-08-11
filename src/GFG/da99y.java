@@ -1,5 +1,7 @@
 package GFG;
 
+import java.util.Stack;
+
 public class da99y {
     static boolean isBalanced(String s) {
         // code here
@@ -11,10 +13,10 @@ public class da99y {
             else if(ch==']'){
                 if(stack.isEmpty() || stack.pop()!='[')return false;
             }
-            if(ch=='}'){
+            else if(ch=='}'){
                 if(stack.isEmpty() || stack.pop()!='{')return false;
             }
-            if(ch==')'){
+            else if(ch==')'){
                 if(stack.isEmpty() || stack.pop()!='(')return false;
             }
         }

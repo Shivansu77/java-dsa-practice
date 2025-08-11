@@ -1,5 +1,7 @@
 package stackandques;
 
+import java.util.Stack;
+
 public class dailyTemp {
     public int[] dailyTemperatures(int[] temperatures) {
         int n=temperatures.length;

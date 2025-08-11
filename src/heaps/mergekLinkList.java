@@ -1,5 +1,8 @@
 package heaps;
 
+import java.util.List;
+import java.util.PriorityQueue;
+
 public class mergekLinkList {
     Node mergeKLists(List<Node> arr) {
         // Add your code here.

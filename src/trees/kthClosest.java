@@ -1,5 +1,7 @@
 package trees;
 
+import java.util.PriorityQueue;
+
 public class kthClosest {
     public int[][] kClosest(int[][] points, int k) {
         // Max heap: largest distance at top

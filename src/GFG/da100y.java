@@ -1,5 +1,7 @@
 package GFG;
 
+import java.util.Stack;
+
 public class da100y {
     static int maxLength(String s) {
         // code here
@@ -11,7 +13,9 @@ public class da100y {
             if(ch=='('){
                 stack.push(i);
             }else{
-                stack.pop();
+                if (!stack.isEmpty()) {
+                    stack.pop();
+                }
                 if(stack.isEmpty()){
                     stack.push(i);
                 }else{
@@ -21,5 +25,4 @@ public class da100y {
         }
         return maxLen;
     }
-}
 }

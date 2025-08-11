@@ -1,5 +1,7 @@
 package trees;
 
+import java.util.ArrayList;
+
 public class boundaryTree {
     ArrayList<Integer> boundaryTraversal(Node root) {
         // code here

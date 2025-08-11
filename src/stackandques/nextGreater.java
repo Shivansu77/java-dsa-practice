@@ -1,5 +1,9 @@
 package stackandques;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Stack;
+
 public class nextGreater {
     public ArrayList<Integer> nextLargerElement(int[] arr) {
         // code here

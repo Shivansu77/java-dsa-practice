@@ -1,5 +1,7 @@
 package trees;
 
+import java.util.ArrayList;
+
 public class correctBst {
     // Function to check whether a Binary Tree is BST or not.
     boolean isBST(Node root) {

@@ -1,5 +1,7 @@
 package heaps;
 
+import java.util.PriorityQueue;
+
 public class origin {
     public int[][] kClosest(int[][] points, int k) {
         // Your code here

@@ -1,11 +1,11 @@
 package graphs;
 
-public class dsu {
+public class sdu {
     private int[] parent;
     private int[] rank;
     private int n;
 
-    public DisjointUnionSets(int n) {
+    public sdu(int n) {
         this.n = n;
         parent = new int[n];
         rank = new int[n];

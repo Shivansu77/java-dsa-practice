@@ -1,5 +1,7 @@
 package trees;
 
+import java.util.Arrays;
+
 public class buildTree { public TreeNode buildTree(int[] preorder, int[] inorder) {
     if(inorder.length==0)return null;
     int pre=preorder[0];

@@ -1,3 +1,5 @@
+package graphs;
+
 import java.util.Arrays;
 
 public class bellmanford {
@@ -9,7 +11,7 @@ public class bellmanford {
     int V, E;
     Edge edge[];
 
-    bellmanford(int v, int e) {
+    public bellmanford(int v, int e) {
         V = v;
         E = e;
         edge = new Edge[E];
@@ -17,7 +19,7 @@ public class bellmanford {
             edge[i] = new Edge();
     }
 
-    void BellmanFordAlgo(BellmanFord graph, int src) {
+    void BellmanFordAlgo(bellmanford graph, int src) {
         int V = graph.V, E = graph.E;
         int[] dist = new int[V];
         Arrays.fill(dist, Integer.MAX_VALUE);
@@ -57,7 +59,7 @@ public class bellmanford {
 
     public static void main(String[] args) {
         int V = 5, E = 8;
-        BellmanFord graph = new BellmanFord(V, E);
+        bellmanford graph = new bellmanford(V, E);
 
         graph.edge[0].source = 0; graph.edge[0].destination = 1; graph.edge[0].weight = -1;
         graph.edge[1].source = 0; graph.edge[1].destination = 2; graph.edge[1].weight = 4;

@@ -1,5 +1,8 @@
 package stackandques;
 
+import java.util.ArrayList;
+import java.util.Stack;
+
 public class stockspan {
     class pair{
         int stock;

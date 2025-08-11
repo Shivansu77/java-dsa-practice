@@ -1,5 +1,7 @@
 package trees;
 
+import java.util.ArrayList;
+
 public class serializeAndDeserial {
     int idx;
     public ArrayList<Integer> serialize(Node root) {
