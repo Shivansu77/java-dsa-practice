@@ -1,6 +1,9 @@
 package graphs;
 
-public class rottenOranges {
+import java.util.LinkedList;
+import java.util.Queue;
+
+class RottenOranges {
     static class Pair {
         int row, col, time;
         Pair(int row, int col, int time) {

@@ -1,6 +1,9 @@
 package graphs;
 
-public class makeConnected {
+import java.util.ArrayList;
+import java.util.List;
+
+class MakeConnected {
     public int makeConnected1(int n, int[][] connections) {
         if(connections.length<n-1)return -1;
         List<List<Integer>> graph = new ArrayList<>();

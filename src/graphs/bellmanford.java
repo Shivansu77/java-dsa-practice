@@ -2,7 +2,17 @@ package graphs;
 
 import java.util.Arrays;
 
-public class bellmanford {
+/**
+ * Bellman-Ford shortest path algorithm from a single source in directed graphs
+ * that may contain negative edge weights.
+ *
+ * - Relaxes all edges V-1 times.
+ * - Detects negative-weight cycles on a final pass.
+ *
+ * Time complexity: O(V * E). Space complexity: O(V).
+ */
+class BellmanFord {
+    /** Edge structure: directed from source -> destination with weight. */
     static class Edge {
         int source, destination, weight;
         Edge() { source = destination = weight = 0; }
@@ -11,7 +21,7 @@ public class bellmanford {
     int V, E;
     Edge edge[];
 
-    public bellmanford(int v, int e) {
+    BellmanFord(int v, int e) {
         V = v;
         E = e;
         edge = new Edge[E];
@@ -19,7 +29,11 @@ public class bellmanford {
             edge[i] = new Edge();
     }
 
-    void BellmanFordAlgo(bellmanford graph, int src) {
+    /**
+     * Runs Bellman-Ford from source vertex src.
+     * Prints distances or reports a negative cycle.
+     */
+    void BellmanFordAlgo(BellmanFord graph, int src) {
         int V = graph.V, E = graph.E;
         int[] dist = new int[V];
         Arrays.fill(dist, Integer.MAX_VALUE);
@@ -59,7 +73,7 @@ public class bellmanford {
 
     public static void main(String[] args) {
         int V = 5, E = 8;
-        bellmanford graph = new bellmanford(V, E);
+        BellmanFord graph = new BellmanFord(V, E);
 
         graph.edge[0].source = 0; graph.edge[0].destination = 1; graph.edge[0].weight = -1;
         graph.edge[1].source = 0; graph.edge[1].destination = 2; graph.edge[1].weight = 4;

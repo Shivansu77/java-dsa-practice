@@ -4,7 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Implementation of a Min Heap data structure
+ * Array-backed Min Heap implementation.
+ * Maintains the min-heap property: each parent is less than or equal to its children.
+ *
+ * - insert: O(log n)
+ * - extractMin: O(log n)
+ * - getMin: O(1)
+ *
+ * Uses a zero-based array representation:
+ * parent(i) = (i - 1) / 2, left(i) = 2*i + 1, right(i) = 2*i + 2.
  */
 public class MinHeap {
     private List<Integer> heap;
@@ -13,30 +21,16 @@ public class MinHeap {
         this.heap = new ArrayList<>();
     }
 
-    /**
-     * Get the parent index of a node
-     */
-    private int parent(int i) {
-        return (i - 1) / 2;
-    }
+    /** Get parent index for node at i. */
+    private int parent(int i) { return (i - 1) / 2; }
 
-    /**
-     * Get the left child index of a node
-     */
-    private int leftChild(int i) {
-        return 2 * i + 1;
-    }
+    /** Get left child index for node at i. */
+    private int leftChild(int i) { return 2 * i + 1; }
 
-    /**
-     * Get the right child index of a node
-     */
-    private int rightChild(int i) {
-        return 2 * i + 2;
-    }
+    /** Get right child index for node at i. */
+    private int rightChild(int i) { return 2 * i + 2; }
 
-    /**
-     * Swap two elements in the heap
-     */
+    /** Swap two elements in the heap array. */
     private void swap(int i, int j) {
         int temp = heap.get(i);
         heap.set(i, heap.get(j));
@@ -44,13 +38,12 @@ public class MinHeap {
     }
 
     /**
-     * Insert a new element into the heap
+     * Inserts a new key and percolates it up to restore heap order.
      */
     public void insert(int key) {
         heap.add(key);
         int i = heap.size() - 1;
-
-        // Fix the min heap property if it is violated
+        // Bubble up until the parent is <= current
         while (i != 0 && heap.get(parent(i)) > heap.get(i)) {
             swap(parent(i), i);
             i = parent(i);
@@ -58,7 +51,7 @@ public class MinHeap {
     }
 
     /**
-     * Heapify the subtree rooted at index i
+     * Heapify (sift down) the subtree rooted at index i.
      */
     private void heapify(int i) {
         int left = leftChild(i);
@@ -80,27 +73,24 @@ public class MinHeap {
     }
 
     /**
-     * Extract the minimum element from the heap
+     * Removes and returns the minimum element (root).
+     * Throws IllegalStateException if the heap is empty.
      */
     public int extractMin() {
         if (heap.size() <= 0) {
             throw new IllegalStateException("Heap is empty");
         }
-
         if (heap.size() == 1) {
             return heap.remove(0);
         }
-
         int root = heap.get(0);
+        // Move last element to root and restore heap by sifting down
         heap.set(0, heap.remove(heap.size() - 1));
         heapify(0);
-
         return root;
     }
 
-    /**
-     * Get the minimum element without removing it
-     */
+    /** Returns (without removing) the minimum element. */
     public int getMin() {
         if (heap.size() <= 0) {
             throw new IllegalStateException("Heap is empty");
@@ -108,33 +98,18 @@ public class MinHeap {
         return heap.get(0);
     }
 
-    /**
-     * Get the current size of the heap
-     */
-    public int size() {
-        return heap.size();
-    }
+    /** Returns number of elements in the heap. */
+    public int size() { return heap.size(); }
 
-    /**
-     * Check if the heap is empty
-     */
-    public boolean isEmpty() {
-        return heap.isEmpty();
-    }
+    /** Returns true if the heap has no elements. */
+    public boolean isEmpty() { return heap.isEmpty(); }
 
-    /**
-     * Print the heap elements
-     */
-    public void printHeap() {
-        System.out.println(heap);
-    }
+    /** Prints the internal array representation of the heap. */
+    public void printHeap() { System.out.println(heap); }
 
-    /**
-     * Main method for testing the MinHeap implementation
-     */
+    /** Simple demonstration. */
     public static void main(String[] args) {
         MinHeap minHeap = new MinHeap();
-
         minHeap.insert(3);
         minHeap.insert(2);
         minHeap.insert(15);
@@ -144,9 +119,7 @@ public class MinHeap {
 
         System.out.println("Min Heap: ");
         minHeap.printHeap();
-
         System.out.println("The minimum element is: " + minHeap.getMin());
-
         System.out.println("Extracting the minimum element: " + minHeap.extractMin());
         System.out.println("Min Heap after extraction: ");
         minHeap.printHeap();

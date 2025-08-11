@@ -2,7 +2,7 @@ package trees;
 
 import java.util.ArrayList;
 
-public class serializeAndDeserial {
+class SerializeAndDeserialize {
     int idx;
     public ArrayList<Integer> serialize(Node root) {
         // code here

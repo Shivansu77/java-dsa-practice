@@ -1,5 +1,8 @@
 package graphs;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class LongestCycleInaGraph {
     int longestLength=-1;
     public int longestCycle(int[] edges) {

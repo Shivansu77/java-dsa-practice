@@ -1,6 +1,9 @@
 package graphs;
 
-public class numIslands {
+import java.util.LinkedList;
+import java.util.Queue;
+
+class NumberOfIslands {
     static class Pair {
         int row;
         int col;
@@ -41,10 +44,9 @@ public class numIslands {
         visited[startRow][startCol] = true;
         queue.add(new Pair(startRow, startCol));
 
-        // Directions: 8 neighbors (including diagonals)
+        // Directions: 4 neighbors
         int[] dRow = {-1, 0, 1, 0};
         int[] dCol = {0, 1, 0, -1};
-
 
         while (!queue.isEmpty()) {
             Pair current = queue.poll();

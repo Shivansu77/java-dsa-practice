@@ -2,7 +2,7 @@ package trees;
 
 import java.util.ArrayList;
 
-public class inorder {
+class InorderTraversal {
     ArrayList<Integer> inOrder(Node root) {
         // Code
         ArrayList<Integer>list=new ArrayList<>();

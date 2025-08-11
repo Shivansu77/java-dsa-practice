@@ -2,7 +2,7 @@ package stackandques;
 
 import java.util.Stack;
 
-public class dailyTemp {
+class DailyTemperatures {
     public int[] dailyTemperatures(int[] temperatures) {
         int n=temperatures.length;
         Stack<Integer>stack=new Stack<>();

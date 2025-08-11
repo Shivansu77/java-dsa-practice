@@ -1,5 +1,7 @@
 package graphs;
 
+import java.util.ArrayList;
+
 public class dfs {
 
         public ArrayList<Integer> dfs1(ArrayList<ArrayList<Integer>> adj) {

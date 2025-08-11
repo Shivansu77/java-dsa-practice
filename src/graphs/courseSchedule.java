@@ -1,6 +1,9 @@
 package graphs;
 
-public class courseSchedule {
+import java.util.ArrayList;
+import java.util.List;
+
+class CourseSchedule {
     public boolean canFinish(int numCourses, int[][] prerequisites) {
         List<List<Integer>>graph=new ArrayList<>();
         boolean[]vis=new boolean[numCourses];
