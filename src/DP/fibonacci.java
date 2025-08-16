@@ -6,18 +6,19 @@ public class fibonacci {
     public static void main(String[] args) {
        Scanner sc=new Scanner(System.in);
        int n=sc.nextInt();
-       System.out.print(fibmemoized(n,new int[n+1]));
+       System.out.print(fib(n));
 
     }
-   /* public static int fib(int n){Recursion used here
+
+    public static int fib(int n){
         if(n<=1){
             return n;
         }
         int fib1=fib(n-1);
         int fib2=fib(n-2);
         return fib1+fib2;
-    }*/
-    public static int fibmemoized(int n,int []qb){
+    }
+   /* public static int fibmemoized(int n,int []qb){
         if(n<=1)return n;
         if(qb[n]!=0){
             return qb[n];
@@ -27,5 +28,5 @@ public class fibonacci {
         int fib=fib1+fib2;
         qb[n]=fib;
         return fib;
-    }
+    }*/
 }
