@@ -32,6 +32,8 @@
       <file url="file://$PROJECT_DIR$/src/graphs/snakesAndLadder.java" />
       <file url="file://$PROJECT_DIR$/src/graphs/rottenOranges.java" />
       <file url="file://$PROJECT_DIR$/src/GFG/dsa108.java" />
+      <file url="file://$PROJECT_DIR$/src/DP/partionequalSubset.java" />
+      <file url="file://$PROJECT_DIR$/src/DP/minjumps.java" />
     </excludeFromCompile>
   </component>
 </project>
