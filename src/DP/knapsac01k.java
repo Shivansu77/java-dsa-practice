@@ -1,5 +1,5 @@
 package DP;
-
+import java.util.*;
 public class knapsac01k {
     static int knapsack(int W, int val[], int wt[]) {
         // code here
@@ -21,5 +21,19 @@ public class knapsac01k {
             }
         }
         return dp[n][W];
+    }
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int w=sc.nextInt();
+        int val[]=new int[w];
+        int wt[]=new int[w];
+        for(int i=0;i<w;i++){
+            val[i]=sc.nextInt();
+        }
+        for(int i=0;i<w;i++){
+            wt[i]=sc.nextInt();
+        }
+        System.out.print(knapsack(w,val,wt));
     }
 }
